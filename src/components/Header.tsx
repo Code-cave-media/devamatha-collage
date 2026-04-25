@@ -1,10 +1,11 @@
 import { useState, useEffect, useCallback } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, Mail, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
+  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Programmes", href: "/courses" },
   { label: "Departments", href: "/departments" },
@@ -16,6 +17,7 @@ const navLinks = [
 ];
 
 const Header = () => {
+  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -82,19 +84,19 @@ const Header = () => {
         className={`sticky top-0 z-50 transition-all duration-500 ${scrolled ? "bg-card/95 backdrop-blur-xl shadow-lg shadow-college-navy/5" : "bg-card/80 backdrop-blur-sm"}`}
       >
         <div className="container flex items-center justify-between">
-          <a href="#home" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img 
               src="/img/logo&typo.png" 
               alt="Deva Matha College" 
               className="h-20 md:h-24 w-auto object-contain"
             />
-          </a>
+          </Link>
 
           <nav className="hidden lg:flex items-center gap-2">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 className={`relative px-2 py-3 text-base font-medium transition-colors rounded-md
                   ${activeSection === link.href.slice(1) ? "text-primary" : "text-foreground/70 hover:text-primary hover:bg-secondary"}`}
               >
@@ -106,7 +108,7 @@ const Header = () => {
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -137,19 +139,28 @@ const Header = () => {
             >
               <nav className="container py-4 flex flex-col gap-1">
                 {navLinks.map((link, i) => (
-                  <motion.a
+                  <motion.div
                     key={link.href}
-                    href={link.href}
-                    onClick={() => setMobileOpen(false)}
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: i * 0.05 }}
-                    className="px-4 py-3 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-secondary rounded-md transition-colors"
                   >
-                    {link.label}
-                  </motion.a>
+                    <Link
+                      to={link.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="block px-4 py-3 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.div>
                 ))}
-                <Button className="mt-2 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
+                <Button 
+                  className="mt-2 bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
+                  onClick={() => {
+                    navigate('/admission');
+                    setMobileOpen(false);
+                  }}
+                >
                   Know More
                 </Button>
               </nav>

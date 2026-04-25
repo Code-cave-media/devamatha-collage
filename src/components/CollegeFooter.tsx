@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Facebook, Instagram, Youtube, Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Facebook, Instagram, Youtube, Phone, Mail, MapPin, ArrowUpRight, Home } from "lucide-react";
 
 const CollegeFooter = () => (
   <footer className="bg-white text-gray-800 relative overflow-hidden border-t border-gray-200">
@@ -11,11 +12,22 @@ const CollegeFooter = () => (
         {/* Brand */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex-1 min-w-[200px]">
           <div className="mb-4">
-            <img
-              src="/img/logo&typo.png"
-              alt="Deva Matha College"
-              className="h-16 w-auto object-contain"
-            />
+            <Link to="/" className="inline-block">
+              <img
+                src="/img/logo&typo.png"
+                alt="Deva Matha College"
+                className="h-16 w-auto object-contain hover:opacity-80 transition-opacity"
+              />
+            </Link>
+          </div>
+          <div className="mb-3">
+            <Link 
+              to="/" 
+              className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium"
+            >
+              <Home className="w-4 h-4" />
+              Back to Home
+            </Link>
           </div>
           <p className="text-sm text-gray-600 leading-relaxed">
             Paisakary P O, Payyavoor<br />
@@ -75,12 +87,7 @@ const CollegeFooter = () => (
                 </motion.a>
               </li>
             ))}
-            <li className="pt-2">
-              <span className="font-semibold text-gray-700">K-reap Contact</span>
-              <br />
-              <span className="text-gray-600">+91-497-271-5185</span>
-            </li>
-          </ul>
+                      </ul>
         </motion.div>
 
         {/* Committees */}

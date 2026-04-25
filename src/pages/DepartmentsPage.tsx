@@ -21,7 +21,7 @@ const DepartmentsPage = () => {
   const departments = [
     {
       id: "english",
-      name: "English",
+      name: "PG ENGLISH",
       icon: BookOpen,
       color: "purple",
       description: "The Department of English, established in 2005, has consistently contributed to academic excellence and intellectual growth. It initially introduced the Bachelor of Arts Degree in English Literature with Journalism, a programme designed to equip students with strong analytical, communicative, and critical thinking skills.",
@@ -42,7 +42,7 @@ const DepartmentsPage = () => {
     },
     {
       id: "malayalam",
-      name: "Malayalam",
+      name: "MALAYALAM",
       icon: Languages,
       color: "accent",
       description: "The Department of Malayalam has been an integral part of the institution since its inception, playing a significant role in promoting language, literature, and cultural studies. From its early years, the Department has been committed to fostering a deep appreciation for Malayalam language and its rich literary heritage.",
@@ -56,7 +56,7 @@ const DepartmentsPage = () => {
     },
     {
       id: "hindi",
-      name: "Hindi",
+      name: "HINDI",
       icon: Languages,
       color: "orange",
       description: "The Department of Hindi plays a significant role in promoting the study of Hindi language and literature, contributing to the linguistic and cultural diversity of the institution. The Department is committed to developing students' proficiency in Hindi while fostering an appreciation for its rich literary traditions.",
@@ -70,7 +70,7 @@ const DepartmentsPage = () => {
     },
     {
       id: "management",
-      name: "Management Studies",
+      name: "MANAGEMENT STUDIES",
       icon: Briefcase,
       color: "blue",
       description: "The Department of Management Studies was established in 2010 with the objective of providing quality education in the field of management and business studies. It offers a full-time Bachelor of Business Administration (BBA) programme structured across six semesters.",
@@ -94,7 +94,7 @@ const DepartmentsPage = () => {
     },
     {
       id: "computer",
-      name: "Computer Applications",
+      name: "COMPUTER APPLICATIONS",
       icon: Monitor,
       color: "green",
       description: "The Department of Computer Applications was established in 2012 with a vision to impart quality education in the field of computing and information technology. It offers a Bachelor of Computer Applications (BCA) programme.",
@@ -118,7 +118,7 @@ const DepartmentsPage = () => {
     },
     {
       id: "commerce",
-      name: "Commerce",
+      name: "PG COMMERCE",
       icon: TrendingUp,
       color: "indigo",
       description: "The Department of Commerce commenced its academic journey in 2004 with the introduction of the B.Com. programme in Computer Applications. In 2009, the Department expanded its undergraduate offerings by introducing B.Com. Co-operation. Demonstrating its commitment to advanced studies, the Department launched the M.Com. Finance in 2012, thereby strengthening its academic profile in the field of commerce and finance.",
@@ -145,7 +145,7 @@ const DepartmentsPage = () => {
     },
     {
       id: "physical",
-      name: "Physical Education",
+      name: "PHYSICAL EDUCATION",
       icon: Trophy,
       color: "primary",
       description: "The Department of Physical Education has been an integral part of the institution, committed to promoting physical fitness, sportsmanship, and overall well-being among students. It plays a vital role in fostering a healthy and active lifestyle, which is essential for holistic development.",

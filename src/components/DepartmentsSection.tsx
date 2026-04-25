@@ -6,7 +6,7 @@ import { ArrowRight, BookOpen, Users, Award, Briefcase, Monitor, TrendingUp, Tro
 const departments = [
   {
     id: "english",
-    name: "English",
+    name: "PG ENGLISH",
     description: "Department of English Language and Literature",
     icon: BookOpen,
     color: "primary",
@@ -16,7 +16,7 @@ const departments = [
   },
   {
     id: "malayalam",
-    name: "Malayalam",
+    name: "MALAYALAM",
     description: "Department of Malayalam Language and Literature",
     icon: Languages,
     color: "accent",
@@ -26,7 +26,7 @@ const departments = [
   },
   {
     id: "hindi",
-    name: "Hindi",
+    name: "HINDI",
     description: "Department of Hindi Language and Literature",
     icon: Languages,
     color: "secondary",
@@ -36,7 +36,7 @@ const departments = [
   },
   {
     id: "management",
-    name: "Management Studies",
+    name: "MANAGEMENT STUDIES",
     description: "Department of Business Administration and Management",
     icon: Briefcase,
     color: "primary",
@@ -46,7 +46,7 @@ const departments = [
   },
   {
     id: "computer",
-    name: "Computer Application",
+    name: "COMPUTER APPLICATIONS",
     description: "Department of Computer Science and Applications",
     icon: Monitor,
     color: "accent",
@@ -56,7 +56,7 @@ const departments = [
   },
   {
     id: "commerce",
-    name: "Commerce",
+    name: "PG COMMERCE",
     description: "Department of Commerce and Finance",
     icon: TrendingUp,
     color: "secondary",
@@ -66,7 +66,7 @@ const departments = [
   },
   {
     id: "physical",
-    name: "Physical Education",
+    name: "PHYSICAL EDUCATION",
     description: "Department of Physical Education and Sports",
     icon: Trophy,
     color: "primary",

@@ -1,7 +1,8 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Briefcase, GraduationCap, Building, Star, ArrowLeft } from "lucide-react";
+import { MapPin, Briefcase, GraduationCap, Building, Star, ArrowLeft, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import CollegeFooter from "@/components/CollegeFooter";
 import { courses } from "@/data/courseData";
@@ -225,6 +226,32 @@ const CourseDetailPage = () => {
             </div>
           </div>
         </div>
+        
+        {/* Additional Apply Now Button at bottom */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6 }}
+          className="text-center mt-12"
+        >
+          <Button
+            size="lg"
+            className="bg-green-600 text-white hover:bg-green-700 px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            onClick={() => {
+              navigate('/admission');
+              setTimeout(() => {
+                const element = document.getElementById("management-quota-form");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }, 100);
+            }}
+          >
+            Apply Now
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Button>
+        </motion.div>
       </section>
 
       <CollegeFooter />

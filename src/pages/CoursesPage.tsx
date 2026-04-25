@@ -182,7 +182,7 @@ const ProgrammeCard = ({ programme, index, navigate }: { programme: typeof progr
 
       {/* Footer */}
       <div className="p-4 bg-background border-t border-border">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-start">
           <Button
             size="sm"
             className="bg-accent text-accent-foreground hover:bg-accent/90"
@@ -303,7 +303,15 @@ const CoursesPage = () => {
             </div>
             <Button
               className="bg-accent text-accent-foreground hover:bg-accent/90"
-              onClick={() => navigate("/admission")}
+              onClick={() => {
+                navigate("/admission");
+                setTimeout(() => {
+                  const element = document.getElementById("management-quota-form");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }, 100);
+              }}
             >
               Apply
             </Button>

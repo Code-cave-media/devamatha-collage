@@ -7,7 +7,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 // Department data
 const departmentData: Record<string, any> = {
   english: {
-    name: "English",
+    name: "PG ENGLISH",
     icon: BookOpen,
     color: "purple",
     fullDescription: [
@@ -26,7 +26,7 @@ const departmentData: Record<string, any> = {
     ]
   },
   malayalam: {
-    name: "Malayalam",
+    name: "MALAYALAM",
     icon: Languages,
     color: "accent",
     fullDescription: [
@@ -38,7 +38,7 @@ const departmentData: Record<string, any> = {
     ]
   },
   hindi: {
-    name: "Hindi",
+    name: "HINDI",
     icon: Languages,
     color: "orange",
     fullDescription: [
@@ -50,7 +50,7 @@ const departmentData: Record<string, any> = {
     ]
   },
   management: {
-    name: "Management Studies",
+    name: "MANAGEMENT STUDIES",
     icon: Briefcase,
     color: "blue",
     fullDescription: [
@@ -72,7 +72,7 @@ const departmentData: Record<string, any> = {
     ]
   },
   computer: {
-    name: "Computer Applications",
+    name: "COMPUTER APPLICATIONS",
     icon: Monitor,
     color: "green",
     fullDescription: [
@@ -94,7 +94,7 @@ const departmentData: Record<string, any> = {
     ]
   },
   commerce: {
-    name: "Commerce",
+    name: "PG COMMERCE",
     icon: TrendingUp,
     color: "indigo",
     fullDescription: [
@@ -119,7 +119,7 @@ const departmentData: Record<string, any> = {
     ]
   },
   physical: {
-    name: "Physical Education",
+    name: "PHYSICAL EDUCATION",
     icon: Trophy,
     color: "primary",
     fullDescription: [
