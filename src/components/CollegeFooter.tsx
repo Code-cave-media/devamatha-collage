@@ -8,7 +8,7 @@ const CollegeFooter = () => (
     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-blue-500 to-accent" />
 
     <div className="container py-14">
-      <div className="flex flex-wrap gap-8 justify-between items-start">
+      <div className="flex flex-wrap gap-2 justify-between items-start">
         {/* Brand */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex-1 min-w-[200px]">
           <div className="mb-4">
@@ -123,7 +123,7 @@ const CollegeFooter = () => (
             </li>
             <li className="flex flex-col gap-0.5">
               <span className="font-semibold text-gray-700">Email</span>
-              <span className="text-gray-600">dmc@devamathacollege.ac.in</span>
+              <span className="text-gray-600 whitespace-nowrap">dmc@devamathacollege.ac.in</span>
             </li>
           </ul>
           <div className="flex gap-3 mt-5">

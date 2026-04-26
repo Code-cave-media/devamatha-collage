@@ -6,7 +6,7 @@ import { ArrowRight, BookOpen, Users, Award, Briefcase, Monitor, TrendingUp, Tro
 const departments = [
   {
     id: "english",
-    name: "PG ENGLISH",
+    name: "ENGLISH",
     description: "Department of English Language and Literature",
     icon: BookOpen,
     color: "primary",
@@ -56,7 +56,7 @@ const departments = [
   },
   {
     id: "commerce",
-    name: "PG COMMERCE",
+    name: "COMMERCE",
     description: "Department of Commerce and Finance",
     icon: TrendingUp,
     color: "secondary",

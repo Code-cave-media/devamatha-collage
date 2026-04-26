@@ -21,7 +21,7 @@ const DepartmentsPage = () => {
   const departments = [
     {
       id: "english",
-      name: "PG ENGLISH",
+      name: "ENGLISH",
       icon: BookOpen,
       color: "purple",
       description: "The Department of English, established in 2005, has consistently contributed to academic excellence and intellectual growth. It initially introduced the Bachelor of Arts Degree in English Literature with Journalism, a programme designed to equip students with strong analytical, communicative, and critical thinking skills.",
@@ -118,7 +118,7 @@ const DepartmentsPage = () => {
     },
     {
       id: "commerce",
-      name: "PG COMMERCE",
+      name: "COMMERCE",
       icon: TrendingUp,
       color: "indigo",
       description: "The Department of Commerce commenced its academic journey in 2004 with the introduction of the B.Com. programme in Computer Applications. In 2009, the Department expanded its undergraduate offerings by introducing B.Com. Co-operation. Demonstrating its commitment to advanced studies, the Department launched the M.Com. Finance in 2012, thereby strengthening its academic profile in the field of commerce and finance.",

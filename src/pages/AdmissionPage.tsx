@@ -59,7 +59,7 @@ const AdmissionPage = () => {
                 </div>
                 <p className="text-sm text-muted-foreground">Access the online application portal for the Kannur University FYUGP Common Admission Process (CAP) here.</p>
                 <button className="flex items-center gap-2 mt-4 text-accent hover:underline text-sm">
-                  <Download className="w-4 h-4" />
+                  <ExternalLink className="w-4 h-4" />
                   Click Here
                 </button>
               </a>
@@ -69,7 +69,7 @@ const AdmissionPage = () => {
                 </div>
                 <p className="text-sm text-muted-foreground">Access the online application portal for the Kannur University PG Common Admission Process (CAP) here.</p>
                 <button className="flex items-center gap-2 mt-4 text-accent hover:underline text-sm">
-                  <Download className="w-4 h-4" />
+                  <ExternalLink className="w-4 h-4" />
                   Click Here
                 </button>
               </a>
@@ -104,10 +104,18 @@ const AdmissionPage = () => {
               <div className="bg-secondary/50 p-6 rounded-xl border border-border">
                 <h3 className="font-semibold text-lg text-foreground mb-3">FYUGP Prospectus</h3>
                 <p className="text-sm text-muted-foreground mb-4">Download prospectus for admission to the FYUG Programmes under Kannur University for the current academic year.</p>
+                <button className="flex items-center gap-2 text-accent hover:underline text-sm">
+                  <Download className="w-4 h-4" />
+                  Download
+                </button>
               </div>
               <div className="bg-secondary/50 p-6 rounded-xl border border-border">
                 <h3 className="font-semibold text-lg text-foreground mb-3">PG Prospectus</h3>
                 <p className="text-sm text-muted-foreground mb-4">Download prospectus for admission to the FYUG Programmes under Kannur University for the current academic year.</p>
+                <button className="flex items-center gap-2 text-accent hover:underline text-sm">
+                  <Download className="w-4 h-4" />
+                  Download
+                </button>
               </div>
             </div>
           </motion.div>
