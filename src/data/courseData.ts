@@ -13,7 +13,7 @@ export const courses: Course[] = [
   {
     id: "bba-hospital-administration",
     name: "BBA<br/>Hospital Administration",
-    description: "BBA in Hospital Administration is a FYUG undergraduate programme that focuses on the management and administration of hospitals, healthcare systems, and medical services. It combines core business administration principles with specialised healthcare management knowledge to prepare students for leadership roles in the healthcare sector.",
+    description: "BBA in Hospital Administration is a FYUG programme that focuses on the management and administration of hospitals, healthcare systems, and medical services. It combines core business administration principles with specialised healthcare management knowledge to prepare students for leadership roles in the healthcare sector.",
     internship: "To enhance practical exposure and industry relevance, the institution has signed MoUs with reputed hospitals such as ASTER MIMS Baby Memorial Hospital, Indira Gandhi Co-Operative Hospital, and St. Joseph's Hospital.",
     careerOpportunities: [
       "Hospital Administrator",
@@ -51,7 +51,7 @@ export const courses: Course[] = [
   {
     id: "bcom-logistics",
     name: "B.Com Logistics and Supply Chain Management",
-    description: "B.Com in Logistics and Supply Chain Management is a FYUG undergraduate programme that focuses on the planning, implementation, and control of the efficient movement and storage of goods, services, and information. The programme integrates commerce fundamentals with logistics and supply chain practices to prepare students for careers in the global trade and distribution sector.",
+    description: "B.Com in Logistics and Supply Chain Management is a FYUG programme that focuses on the planning, implementation, and control of the efficient movement and storage of goods, services, and information. The programme integrates commerce fundamentals with logistics and supply chain practices to prepare students for careers in the global trade and distribution sector.",
     internship: "To strengthen practical exposure and ensure industry relevance, the institution has established a Memorandum of Understanding (MoU) with Jackways Logistics LLP in Cochin and Mangalore.",
     careerOpportunities: [
       "Logistics Manager",
@@ -90,7 +90,7 @@ export const courses: Course[] = [
   {
     id: "bsc-ai-data-science",
     name: "B.Sc AI<br/>and Data Science",
-    description: "B.Sc in Artificial Intelligence and Data Science is a FYUG undergraduate programme that focuses on the study of intelligent systems, data analysis, and computational techniques. The course integrates computer science, mathematics, and statistics to equip students with the skills required to analyse data, build AI models, and develop smart solutions for real-world problems.",
+    description: "B.Sc in Artificial Intelligence and Data Science is a FYUG programme that focuses on the study of intelligent systems, data analysis, and computational techniques. The course integrates computer science, mathematics, and statistics to equip students with the skills required to analyse data, build AI models, and develop smart solutions for real-world problems.",
     internship: "The programme includes a compulsory internship that provides students with hands-on experience in real-world projects related to artificial intelligence and data science. This enables students to apply theoretical knowledge in practical settings and gain industry exposure.",
     careerOpportunities: [
       "Data Analyst",
@@ -132,7 +132,7 @@ export const courses: Course[] = [
   {
     id: "bcom-business-analytics",
     name: "B.Com<br/>Business Analytics",
-    description: "B.Com in Business Analytics is a FYUG undergraduate programme that focuses on analysing business data to support decision-making and strategic planning. The course combines commerce, statistics, and data analysis techniques to equip students with skills in interpreting data and deriving meaningful business insights.",
+    description: "B.Com in Business Analytics is a FYUG programme that focuses on analysing business data to support decision-making and strategic planning. The course combines commerce, statistics, and data analysis techniques to equip students with skills in interpreting data and deriving meaningful business insights.",
     internship: "The programme includes a compulsory internship that provides practical exposure to real-world business analytics applications. Students gain hands-on experience in data analysis, reporting, and decision-making processes within organizations.",
     careerOpportunities: [
       "Business Analyst",
@@ -172,7 +172,7 @@ export const courses: Course[] = [
   {
     id: "bca",
     name: "Bachelor of Computer Applications (BCA)",
-    description: "Bachelor of Computer Applications (BCA) is a FYUG undergraduate programme that focuses on computer science, software development, and information technology. The course equips students with the knowledge and skills required to design, develop, and manage software applications and IT systems.",
+    description: "Bachelor of Computer Applications (BCA) is a FYUG programme that focuses on computer science, software development, and information technology. The course equips students with the knowledge and skills required to design, develop, and manage software applications and IT systems.",
     internship: "The programme includes a compulsory internship that provides practical exposure in software development, IT services, and real-world computing environments. This helps students gain hands-on experience and industry readiness.",
     careerOpportunities: [
       "Software Developer",
@@ -210,7 +210,7 @@ export const courses: Course[] = [
   {
     id: "bba",
     name: "Bachelor of Business Administration (BBA)",
-    description: "Bachelor of Business Administration (BBA) is a FYUG undergraduate programme that focuses on developing managerial, leadership, and entrepreneurial skills. The course provides a strong foundation in business principles, preparing students to handle various aspects of management in organizations.",
+    description: "Bachelor of Business Administration (BBA) is a FYUG programme that focuses on developing managerial, leadership, and entrepreneurial skills. The course provides a strong foundation in business principles, preparing students to handle various aspects of management in organizations.",
     internship: "The programme includes a compulsory internship that offers practical exposure to business operations, management practices, and real-time corporate environments, enhancing students' industry readiness.",
     careerOpportunities: [
       "Business Executive",
@@ -247,7 +247,7 @@ export const courses: Course[] = [
   {
     id: "bcom-finance",
     name: "B.Com Finance",
-    description: "B.Com in Finance is a FYUG undergraduate programme that focuses on financial management, investment analysis, banking, and accounting. The course provides students with a strong foundation in financial principles and equips them with the skills required to manage financial resources effectively in business organizations.",
+    description: "B.Com in Finance is a FYUG programme that focuses on financial management, investment analysis, banking, and accounting. The course provides students with a strong foundation in financial principles and equips them with the skills required to manage financial resources effectively in business organizations.",
     internship: "The programme includes a compulsory internship that provides practical exposure to financial operations, accounting practices, and real-world business environments, helping students gain industry experience.",
     careerOpportunities: [
       "Financial Analyst",
@@ -287,7 +287,7 @@ export const courses: Course[] = [
   {
     id: "bcom-cooperation",
     name: "B.Com Co-Operation",
-    description: "B.Com Co-Operation is a FYUG undergraduate programme that focuses on the principles and practices of co-operative organizations, banking, and rural development. The course combines commerce education with co-operative management to prepare students for careers in co-operative institutions and financial sectors.",
+    description: "B.Com Co-Operation is a FYUG programme that focuses on the principles and practices of co-operative organizations, banking, and rural development. The course combines commerce education with co-operative management to prepare students for careers in co-operative institutions and financial sectors.",
     internship: "The programme includes a compulsory internship that provides practical exposure in co-operative societies, banks, and financial institutions, enabling students to understand real-world operations and management practices.",
     careerOpportunities: [
       "Co-operative Officer",
@@ -327,7 +327,7 @@ export const courses: Course[] = [
   {
     id: "ba-english",
     name: "BA English",
-    description: "BA English is a FYUG undergraduate programme that focuses on the study of English literature, language, and communication. The course develops critical thinking, analytical skills, and effective communication abilities through the study of literary texts, linguistics, and cultural contexts.",
+    description: "BA English is a FYUG programme that focuses on the study of English literature, language, and communication. The course develops critical thinking, analytical skills, and effective communication abilities through the study of literary texts, linguistics, and cultural contexts.",
     internship: "The programme includes a compulsory internship that provides practical exposure in areas such as content writing, publishing, media, teaching, and communication-based roles, helping students gain real-world experience.",
     careerOpportunities: [
       "Content Writer",

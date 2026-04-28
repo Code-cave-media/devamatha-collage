@@ -119,6 +119,175 @@ const StudentsCornerPage = () => {
             </div>
           </motion.div>
 
+          {/* Career Guidance and Placement Cell Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/20 dark:to-cyan-950/20 rounded-3xl p-8 border border-blue-200 dark:border-blue-800"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center">
+                <Briefcase className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="font-heading text-3xl font-bold text-foreground">Career Guidance and Placement Cell</h2>
+            </div>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              The Career Guidance and Placement Cell of Devamatha Arts & Science College functions as a crucial bridge between students and the professional world. It is dedicated to empowering students with the necessary skills, knowledge, and opportunities required for successful career development. Through structured training programmes, industry interaction, and placement support, the Cell strives to enhance the overall employability of students.
+            </p>
+            <div className="bg-white dark:bg-card p-6 rounded-xl shadow-md">
+              <h3 className="font-semibold text-lg text-foreground mb-4 flex items-center gap-2">
+                <Target className="w-5 h-5 text-blue-600" />
+                Objectives
+              </h3>
+              <p className="text-sm text-muted-foreground mb-3">The Placement Cell aims to:</p>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <span>Facilitate campus recruitment drives and job placement opportunities for students</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <span>Enhance students' employability through skill development programmes and training sessions</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <span>Establish and strengthen industry–institution collaborations</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <span>Provide comprehensive career guidance and professional counseling</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <span>Prepare students for competitive examinations, interviews, and workplace challenges</span>
+                </li>
+              </ul>
+              <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-950/30 rounded-lg">
+                <p className="text-sm text-muted-foreground"><span className="font-semibold">Coordinator</span> : Manu Joseph, <span className="font-semibold">Members</span> : Pravisha N, Swathi V.S</p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Committees Section */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Anti Ragging Committee */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="bg-card rounded-3xl p-6 border border-border shadow-lg"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center">
+                  <Shield className="w-5 h-5 text-white" />
+                </div>
+                <h3 className="font-heading text-xl font-bold text-foreground">Anti Ragging Committee</h3>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                In pursuance of the UGC Regulations on curbing the menace of ragging in higher educational institutions, the College has constituted an Anti-Ragging Committee comprising faculty members, police personnel, legal experts, and other stakeholders. The Committee is entrusted with addressing and preventing any incidents of ragging, both within and outside the college premises.
+              </p>
+            </motion.div>
+
+            {/* Women's Anti-Harassment Cell */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-950/20 dark:to-rose-950/20 rounded-3xl p-6 border border-pink-200 dark:border-pink-800"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center">
+                  <Heart className="w-5 h-5 text-white" />
+                </div>
+                <h3 className="font-heading text-xl font-bold text-foreground">Women's Anti-Harassment Cell</h3>
+              </div>
+              <p className="text-sm text-muted-foreground mb-4 italic">"Educate a man, you educate an individual; educate a woman, you educate a family."</p>
+              <p className="text-sm text-muted-foreground mb-4">
+                The College Women's Cell endeavours to empower women and promote gender sensitivity, thereby fostering a safe and congenial environment on the campus. The Cell also functions as a Women's Grievance Redressal Committee, addressing issues and concerns related to women students and staff.
+              </p>
+              <div className="p-3 bg-white dark:bg-card rounded-lg">
+                <p className="text-xs text-muted-foreground"><span className="font-semibold">Coordinator</span> – Jismy John</p>
+                <p className="text-xs text-muted-foreground"><span className="font-semibold">Members</span> – Monisha Mohandas, Sarisa David, Amitha Benny</p>
+              </div>
+            </motion.div>
+
+            {/* Students' Grievance Redressal Cell */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.7 }}
+              className="bg-card rounded-3xl p-6 border border-border shadow-lg"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
+                  <Users className="w-5 h-5 text-white" />
+                </div>
+                <h3 className="font-heading text-xl font-bold text-foreground">Students' Grievance Redressal Cell</h3>
+              </div>
+              <p className="text-sm text-muted-foreground mb-4">
+                The Student Grievance Redressal (SGR) Cell addresses the grievances of students and provides appropriate solutions to ensure the smooth functioning of the College. The Cell also functions as the Discipline Committee on the campus.
+              </p>
+              <div className="p-3 bg-accent/10 rounded-lg">
+                <p className="text-xs text-muted-foreground"><span className="font-semibold">Convener</span> – Shaijo P.S</p>
+                <p className="text-xs text-muted-foreground"><span className="font-semibold">Members</span> – Manu Joseph</p>
+              </div>
+            </motion.div>
+
+            {/* Students' Welfare Cell */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.8 }}
+              className="bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-950/20 dark:to-amber-950/20 rounded-3xl p-6 border border-yellow-200 dark:border-yellow-800"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full bg-yellow-600 flex items-center justify-center">
+                  <Star className="w-5 h-5 text-white" />
+                </div>
+                <h3 className="font-heading text-xl font-bold text-foreground">Students' Welfare Cell</h3>
+              </div>
+              <p className="text-sm text-muted-foreground mb-4">
+                The Student Welfare Cell is committed to promoting the overall well-being of students by ensuring the effective implementation of various welfare schemes and programmes.
+              </p>
+              <p className="text-sm text-muted-foreground mb-4">
+                The Cell undertakes initiatives to facilitate scholarships, insurance, healthcare services, student aid funds, and other welfare measures in association with competent agencies, including the college management. It also provides guidance and counselling support to students, maintains systematic records of all welfare schemes, and gives special attention to the needs of differently abled students.
+              </p>
+              <div className="p-3 bg-white dark:bg-card rounded-lg">
+                <p className="text-xs text-muted-foreground"><span className="font-semibold">Coordinator</span> – Remya M.P</p>
+                <p className="text-xs text-muted-foreground"><span className="font-semibold">Members</span> – Manu Joseph, Sibichan Thomas, Ramzeena, Jain Antony</p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Download Forms Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.9 }}
+            className="bg-card rounded-3xl p-8 border border-border shadow-lg"
+          >
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+                <Download className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="font-heading text-3xl font-bold text-foreground">Download Forms</h2>
+            </div>
+            <div className="flex justify-center">
+              <div className="bg-secondary/50 p-6 rounded-xl border border-border hover:border-accent transition-all flex items-center justify-center gap-3 group cursor-pointer max-w-md w-full">
+                <FileText className="w-8 h-8 text-accent" />
+                <span className="font-semibold text-foreground">Condonation Form</span>
+                <Download className="w-5 h-5 text-accent group-hover:scale-110 transition-transform" />
+              </div>
+            </div>
+          </motion.div>
+
           {/* Alumni Association Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -278,57 +447,6 @@ const StudentsCornerPage = () => {
             </div>
           </motion.div>
 
-          {/* Career Guidance and Placement Cell Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/20 dark:to-cyan-950/20 rounded-3xl p-8 border border-blue-200 dark:border-blue-800"
-          >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center">
-                <Briefcase className="w-6 h-6 text-white" />
-              </div>
-              <h2 className="font-heading text-3xl font-bold text-foreground">Career Guidance and Placement Cell</h2>
-            </div>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              The Career Guidance and Placement Cell of Devamatha Arts & Science College functions as a crucial bridge between students and the professional world. It is dedicated to empowering students with the necessary skills, knowledge, and opportunities required for successful career development. Through structured training programmes, industry interaction, and placement support, the Cell strives to enhance the overall employability of students.
-            </p>
-            <div className="bg-white dark:bg-card p-6 rounded-xl shadow-md">
-              <h3 className="font-semibold text-lg text-foreground mb-4 flex items-center gap-2">
-                <Target className="w-5 h-5 text-blue-600" />
-                Objectives
-              </h3>
-              <p className="text-sm text-muted-foreground mb-3">The Placement Cell aims to:</p>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <span>Facilitate campus recruitment drives and job placement opportunities for students</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <span>Enhance students' employability through skill development programmes and training sessions</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <span>Establish and strengthen industry–institution collaborations</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <span>Provide comprehensive career guidance and professional counseling</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <span>Prepare students for competitive examinations, interviews, and workplace challenges</span>
-                </li>
-              </ul>
-              <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-950/30 rounded-lg">
-                <p className="text-sm text-muted-foreground"><span className="font-semibold">Coordinator</span> : Manu Joseph, <span className="font-semibold">Members</span> : Pravisha N, Swathi V.S</p>
-              </div>
-            </div>
-          </motion.div>
-
           {/* NSS Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -438,124 +556,6 @@ const StudentsCornerPage = () => {
               <div className="bg-green-50 dark:bg-green-950/30 p-6 rounded-xl">
                 <p className="text-sm text-muted-foreground"><span className="font-semibold">Unit No.</span> : 45</p>
                 <p className="text-sm text-muted-foreground"><span className="font-semibold">Programme Officer</span> : Pravisha N</p>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Committees Section */}
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Anti Ragging Committee */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-              className="bg-card rounded-3xl p-6 border border-border shadow-lg"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="font-heading text-xl font-bold text-foreground">Anti Ragging Committee</h3>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                In pursuance of the UGC Regulations on curbing the menace of ragging in higher educational institutions, the College has constituted an Anti-Ragging Committee comprising faculty members, police personnel, legal experts, and other stakeholders. The Committee is entrusted with addressing and preventing any incidents of ragging, both within and outside the college premises.
-              </p>
-            </motion.div>
-
-            {/* Women's Anti-Harassment Cell */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6 }}
-              className="bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-950/20 dark:to-rose-950/20 rounded-3xl p-6 border border-pink-200 dark:border-pink-800"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center">
-                  <Heart className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="font-heading text-xl font-bold text-foreground">Women's Anti-Harassment Cell</h3>
-              </div>
-              <p className="text-sm text-muted-foreground mb-4 italic">"Educate a man, you educate an individual; educate a woman, you educate a family."</p>
-              <p className="text-sm text-muted-foreground mb-4">
-                The College Women's Cell endeavours to empower women and promote gender sensitivity, thereby fostering a safe and congenial environment on the campus. The Cell also functions as a Women's Grievance Redressal Committee, addressing issues and concerns related to women students and staff.
-              </p>
-              <div className="p-3 bg-white dark:bg-card rounded-lg">
-                <p className="text-xs text-muted-foreground"><span className="font-semibold">Coordinator</span> – Jismy John</p>
-                <p className="text-xs text-muted-foreground"><span className="font-semibold">Members</span> – Monisha Mohandas, Sarisa David, Amitha Benny</p>
-              </div>
-            </motion.div>
-
-            {/* Students' Grievance Redressal Cell */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.7 }}
-              className="bg-card rounded-3xl p-6 border border-border shadow-lg"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
-                  <Users className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="font-heading text-xl font-bold text-foreground">Students' Grievance Redressal Cell</h3>
-              </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                The Student Grievance Redressal (SGR) Cell addresses the grievances of students and provides appropriate solutions to ensure the smooth functioning of the College. The Cell also functions as the Discipline Committee on the campus.
-              </p>
-              <div className="p-3 bg-accent/10 rounded-lg">
-                <p className="text-xs text-muted-foreground"><span className="font-semibold">Convener</span> – Shaijo P.S</p>
-                <p className="text-xs text-muted-foreground"><span className="font-semibold">Members</span> – Manu Joseph</p>
-              </div>
-            </motion.div>
-
-            {/* Students' Welfare Cell */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.8 }}
-              className="bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-950/20 dark:to-amber-950/20 rounded-3xl p-6 border border-yellow-200 dark:border-yellow-800"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-yellow-600 flex items-center justify-center">
-                  <Star className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="font-heading text-xl font-bold text-foreground">Students' Welfare Cell</h3>
-              </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                The Student Welfare Cell is committed to promoting the overall well-being of students by ensuring the effective implementation of various welfare schemes and programmes.
-              </p>
-              <p className="text-sm text-muted-foreground mb-4">
-                The Cell undertakes initiatives to facilitate scholarships, insurance, healthcare services, student aid funds, and other welfare measures in association with competent agencies, including the college management. It also provides guidance and counselling support to students, maintains systematic records of all welfare schemes, and gives special attention to the needs of differently abled students.
-              </p>
-              <div className="p-3 bg-white dark:bg-card rounded-lg">
-                <p className="text-xs text-muted-foreground"><span className="font-semibold">Coordinator</span> – Remya M.P</p>
-                <p className="text-xs text-muted-foreground"><span className="font-semibold">Members</span> – Manu Joseph, Sibichan Thomas, Ramzeena, Jain Antony</p>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Download Forms Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.9 }}
-            className="bg-card rounded-3xl p-8 border border-border shadow-lg"
-          >
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                <Download className="w-6 h-6 text-white" />
-              </div>
-              <h2 className="font-heading text-3xl font-bold text-foreground">Download Forms</h2>
-            </div>
-            <div className="flex justify-center">
-              <div className="bg-secondary/50 p-6 rounded-xl border border-border hover:border-accent transition-all flex items-center justify-center gap-3 group cursor-pointer max-w-md w-full">
-                <FileText className="w-8 h-8 text-accent" />
-                <span className="font-semibold text-foreground">Condonation Form</span>
-                <Download className="w-5 h-5 text-accent group-hover:scale-110 transition-transform" />
               </div>
             </div>
           </motion.div>
