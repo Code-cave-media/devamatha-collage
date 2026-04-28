@@ -170,7 +170,7 @@ const CoursesSection = () => {
                 />
               )}
               <span className="relative z-10 flex items-center gap-2">
-                <GraduationCap className="w-4 h-4" /> 2 Years Post Graduate Programme
+                <GraduationCap className="w-4 h-4" /> PG Programmes
               </span>
             </button>
           </div>
