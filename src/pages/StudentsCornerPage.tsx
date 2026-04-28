@@ -104,7 +104,7 @@ const StudentsCornerPage = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="https://www.kannuruniversity.ac.in/en/academics/syllabus/?" target="_blank" rel="noopener noreferrer" className="flex-1 bg-gradient-to-r from-accent to-primary text-white p-6 rounded-xl hover:opacity-90 transition-all flex items-center justify-between group">
                 <div>
-                  <h3 className="font-semibold text-lg mb-1">FYUGP Syllabus</h3>
+                  <h3 className="font-semibold text-lg mb-1">FYUG Syllabus</h3>
                   <p className="text-sm opacity-90">Undergraduate programmes</p>
                 </div>
                 <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
