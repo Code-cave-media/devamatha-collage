@@ -367,7 +367,7 @@ export const courses: Course[] = [
   {
     id: "ma-english",
     name: "MA English",
-    description: "MA English is a FYUGP postgraduate programme that offers advanced study in English literature, language, and critical theory. The course enhances analytical, interpretative, and research skills through an in-depth exploration of literary texts, cultural contexts, and theoretical perspectives.",
+    description: "MA English is a 2 years post graduate programme that offers advanced study in English literature, language, and critical theory. The course enhances analytical, interpretative, and research skills through an in-depth exploration of literary texts, cultural contexts, and theoretical perspectives.",
     internship: "",
     careerOpportunities: [
       "Lecturer/Assistant Professor",
@@ -407,7 +407,7 @@ export const courses: Course[] = [
   {
     id: "mcom-finance",
     name: "M.Com Finance",
-    description: "M.Com in Finance is a FYUGP postgraduate programme that provides advanced knowledge in financial management, investment analysis, accounting, and corporate finance. The course is designed to develop analytical, decision-making, and research skills required for higher-level roles in finance and commerce.",
+    description: "M.Com in Finance is a 2 years post graduate programme that provides advanced knowledge in financial management, investment analysis, accounting, and corporate finance. The course is designed to develop analytical, decision-making, and research skills required for higher-level roles in finance and commerce.",
     internship: "",
     careerOpportunities: [
       "Financial Analyst",

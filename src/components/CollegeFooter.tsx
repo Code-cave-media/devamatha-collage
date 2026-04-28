@@ -10,7 +10,7 @@ const CollegeFooter = () => (
     <div className="container py-14">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
         {/* Brand */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex flex-col items-start">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex flex-col items-center">
           <div className="mb-4">
             <Link to="/" className="inline-block">
               <img
@@ -20,7 +20,7 @@ const CollegeFooter = () => (
               />
             </Link>
           </div>
-          <div className="flex gap-16">
+          <div className="flex gap-8 justify-center w-full">
             {[
               { Icon: Facebook, label: "Facebook", url: "https://www.facebook.com/share/18QMWeJENw/" },
               { Icon: Instagram, label: "Instagram", url: "https://www.instagram.com/devamathacollegepaisakary/#" },
