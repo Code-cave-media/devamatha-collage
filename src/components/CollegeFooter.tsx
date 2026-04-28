@@ -8,9 +8,9 @@ const CollegeFooter = () => (
     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-blue-500 to-accent" />
 
     <div className="container py-14">
-      <div className="flex flex-wrap gap-2 justify-between items-start">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
         {/* Brand */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex-1 min-w-[200px]">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex flex-col items-start">
           <div className="mb-4">
             <Link to="/" className="inline-block">
               <img
@@ -20,7 +20,7 @@ const CollegeFooter = () => (
               />
             </Link>
           </div>
-                    <div className="flex gap-14 mt-5">
+          <div className="flex gap-16">
             {[
               { Icon: Facebook, label: "Facebook", url: "https://www.facebook.com/share/18QMWeJENw/" },
               { Icon: Instagram, label: "Instagram", url: "https://www.instagram.com/devamathacollegepaisakary/#" },
@@ -43,7 +43,7 @@ const CollegeFooter = () => (
         </motion.div>
 
         {/* Related Links */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="flex-1 min-w-[180px]">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
           <h4 className="font-display text-base font-semibold mb-4">Related Links</h4>
           <ul className="space-y-2 text-sm text-gray-600">
             {[
@@ -72,7 +72,7 @@ const CollegeFooter = () => (
         </motion.div>
 
         {/* Committees */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="flex-1 min-w-[180px]">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
           <h4 className="font-display text-base font-semibold mb-4">Committees</h4>
           <ul className="space-y-2 text-sm text-gray-600">
             {[
@@ -88,7 +88,7 @@ const CollegeFooter = () => (
         </motion.div>
 
         {/* Contact Us */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="flex-1 min-w-[220px]">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}>
           <h4 className="font-display text-base font-semibold mb-4">Contact Us</h4>
           <div className="space-y-3 text-sm text-gray-600">
             <div className="font-semibold text-gray-800">Devamatha Arts & Science College</div>
