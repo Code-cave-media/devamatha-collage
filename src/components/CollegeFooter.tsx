@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; 
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Youtube, Phone, Mail, MapPin, ArrowUpRight, Home } from "lucide-react";
 
@@ -14,30 +14,23 @@ const CollegeFooter = () => (
           <div className="mb-4">
             <Link to="/" className="inline-block">
               <img
-                src="/img/logo&typo.png"
+                src="/img/footer-logo.png"
                 alt="Deva Matha College"
-                className="h-16 w-auto object-contain hover:opacity-80 transition-opacity"
+                className="h-48 w-auto object-contain hover:opacity-80 transition-opacity"
               />
             </Link>
           </div>
-          <div className="mb-3">
-            <Link 
-              to="/" 
-              className="inline-flex items-center gap-2 bg-accent text-white px-4 py-2 rounded-lg hover:bg-accent/90 transition-all font-medium shadow-md hover:shadow-lg"
-            >
-              <Home className="w-4 h-4" />
-              Back to Home
-            </Link>
-          </div>
-          <div className="flex gap-3 mt-5">
+                    <div className="flex gap-14 mt-5">
             {[
-              { Icon: Facebook, label: "Facebook" },
-              { Icon: Instagram, label: "Instagram" },
-              { Icon: Youtube, label: "YouTube" },
-            ].map(({ Icon, label }) => (
+              { Icon: Facebook, label: "Facebook", url: "https://www.facebook.com/share/18QMWeJENw/" },
+              { Icon: Instagram, label: "Instagram", url: "https://www.instagram.com/devamathacollegepaisakary/#" },
+              { Icon: Youtube, label: "YouTube", url: "https://youtube.com/@devamathacollegepaisakary?si=H4vEGhR7MoDFnj4Z" },
+            ].map(({ Icon, label, url }) => (
               <motion.a
                 key={label}
-                href="#"
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={label}
                 className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center hover:bg-accent hover:text-white transition-all duration-300 border border-gray-300"
                 whileHover={{ scale: 1.2, rotate: 5 }}
