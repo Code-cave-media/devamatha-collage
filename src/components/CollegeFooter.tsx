@@ -23,109 +23,12 @@ const CollegeFooter = () => (
           <div className="mb-3">
             <Link 
               to="/" 
-              className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium"
+              className="inline-flex items-center gap-2 bg-accent text-white px-4 py-2 rounded-lg hover:bg-accent/90 transition-all font-medium shadow-md hover:shadow-lg"
             >
               <Home className="w-4 h-4" />
               Back to Home
             </Link>
           </div>
-          <p className="text-sm text-gray-600 leading-relaxed">
-            Paisakary P O, Payyavoor<br />
-            Kannur Dist. Kerala, 670633.<br />
-            Phone: 04602939190<br />
-            <a href="https://share.google/0h73lBiiS8bt844Ue" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
-              Location Map
-            </a>
-          </p>
-        </motion.div>
-
-        {/* Related Links */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="flex-1 min-w-[150px]">
-          <h4 className="font-display text-base font-semibold mb-4">Related Links</h4>
-          <ul className="space-y-2 text-sm text-gray-600">
-            {[
-              { label: "Academic Bank of Credit", url: "https://abc.gov.in/" },
-              { label: "Swayam", url: "https://swayam.gov.in/" },
-              { label: "Digi Locker", url: "https://digilocker.gov.in/" },
-              { label: "Kannur University", url: "https://kannuruniversity.ac.in/" },
-            ].map((link) => (
-              <li key={link.label}>
-                <motion.a
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-accent transition-colors inline-flex items-center gap-1 group text-gray-700"
-                  whileHover={{ x: 5 }}
-                >
-                  {link.label}
-                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </motion.a>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-
-        {/* K Reap Portal */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }} className="flex-1 min-w-[150px]">
-          <h4 className="font-display text-base font-semibold mb-4">K Reap Portal</h4>
-          <ul className="space-y-2 text-sm text-gray-600">
-            {[
-              { label: "Course Selection", url: "https://kannuradm.kreap.co.in/applicant/?#/login?client=KANNUR" },
-              { label: "Student Login", url: "https://kannurops.kreap.co.in/studentLogin/?#/kannur/studentLogin" },
-              { label: "College Login", url: "https://kannurops.kreap.co.in/?#/kannur" },
-            ].map((link) => (
-              <li key={link.label}>
-                <motion.a
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-accent transition-colors inline-flex items-center gap-1 group text-gray-700"
-                  whileHover={{ x: 5 }}
-                >
-                  {link.label}
-                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </motion.a>
-              </li>
-            ))}
-                      </ul>
-        </motion.div>
-
-        {/* Committees */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="flex-1 min-w-[150px]">
-          <h4 className="font-display text-base font-semibold mb-4">Committees</h4>
-          <ul className="space-y-2 text-sm text-gray-600">
-            {[
-              "Anti Ragging Cell",
-              "Women's Anti-Harassment Cell",
-              "Students' Grievance Redressal Cell",
-              "Students Welfare Cell"
-            ].map((committee) => (
-              <li key={committee}>{committee}</li>
-            ))}
-          </ul>
-        </motion.div>
-
-        {/* Contact */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="flex-1 min-w-[200px]">
-          <h4 className="font-display text-base font-semibold mb-4">Contact</h4>
-          <ul className="space-y-3 text-sm text-gray-600">
-            <li className="flex flex-col gap-0.5">
-              <span className="font-semibold text-gray-700">Administrator</span>
-              <span className="text-gray-600">918870260</span>
-            </li>
-            <li className="flex flex-col gap-0.5">
-              <span className="font-semibold text-gray-700">Office</span>
-              <span className="text-gray-600">04602939190</span>
-            </li>
-            <li className="flex flex-col gap-0.5">
-              <span className="font-semibold text-gray-700">Admission Officer</span>
-              <span className="text-gray-600">9400111818</span>
-            </li>
-            <li className="flex flex-col gap-0.5">
-              <span className="font-semibold text-gray-700">Email</span>
-              <span className="text-gray-600 whitespace-nowrap">dmc@devamathacollege.ac.in</span>
-            </li>
-          </ul>
           <div className="flex gap-3 mt-5">
             {[
               { Icon: Facebook, label: "Facebook" },
@@ -143,6 +46,81 @@ const CollegeFooter = () => (
                 <Icon className="w-4 h-4" />
               </motion.a>
             ))}
+          </div>
+        </motion.div>
+
+        {/* Related Links */}
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="flex-1 min-w-[180px]">
+          <h4 className="font-display text-base font-semibold mb-4">Related Links</h4>
+          <ul className="space-y-2 text-sm text-gray-600">
+            {[
+              { label: "Academic Bank of Credit", url: "https://abc.gov.in/" },
+              { label: "Swayam", url: "https://swayam.gov.in/" },
+              { label: "Digi Locker", url: "https://digilocker.gov.in/" },
+              { label: "Kannur University", url: "https://kannuruniversity.ac.in/" },
+              { label: "K-Reap Course Selection", url: "https://kannuradm.kreap.co.in/applicant/?#/login?client=KANNUR" },
+              { label: "K-Reap Student Login", url: "https://kannurops.kreap.co.in/studentLogin/?#/kannur/studentLogin" },
+              { label: "K-Reap College Login", url: "https://kannurops.kreap.co.in/?#/kannur" },
+            ].map((link) => (
+              <li key={link.label}>
+                <motion.a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-colors inline-flex items-center gap-1 group text-gray-700"
+                  whileHover={{ x: 5 }}
+                >
+                  {link.label}
+                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </motion.a>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+
+        {/* Committees */}
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="flex-1 min-w-[180px]">
+          <h4 className="font-display text-base font-semibold mb-4">Committees</h4>
+          <ul className="space-y-2 text-sm text-gray-600">
+            {[
+              "Anti Ragging Cell",
+              "Women's Anti-Harassment Cell",
+              "Students' Grievance Redressal Cell",
+              "Students Welfare Cell",
+              "Special Protection Group"
+            ].map((committee) => (
+              <li key={committee}>{committee}</li>
+            ))}
+          </ul>
+        </motion.div>
+
+        {/* Contact Us */}
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="flex-1 min-w-[220px]">
+          <h4 className="font-display text-base font-semibold mb-4">Contact Us</h4>
+          <div className="space-y-3 text-sm text-gray-600">
+            <div className="font-semibold text-gray-800">Devamatha Arts & Science College</div>
+            <p className="leading-relaxed">
+              Paisakary P O, Payyavoor<br />
+              Kannur Dist. Kerala, 670633.
+            </p>
+            <div className="flex items-center gap-2">
+              <Phone className="w-4 h-4 text-accent" />
+              <span>04602939190</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Phone className="w-4 h-4 text-accent" />
+              <span>Admin: 918870260</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Phone className="w-4 h-4 text-accent" />
+              <span>Admission Nodal Officer: 9400111818</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Mail className="w-4 h-4 text-accent" />
+              <a href="mailto:dmc@devamathacollege.ac.in" className="hover:text-accent transition-colors whitespace-nowrap">
+                dmc@devamathacollege.ac.in
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>

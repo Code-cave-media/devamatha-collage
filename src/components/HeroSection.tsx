@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button";
 import { useCountUp } from "@/hooks/useCountUp";
 import heroCampus from "/img/hero.jpg";
 
+// Module-level variable to track first load in current session
+let hasAnimatedInSession = false;
+
 const TypeWriter = ({ words }: { words: string[] }) => {
   const [wordIdx, setWordIdx] = useState(0);
   const [charIdx, setCharIdx] = useState(0);
@@ -62,6 +65,14 @@ const HeroSection = () => {
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const heroOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
+  const [isFirstLoad, setIsFirstLoad] = useState(!hasAnimatedInSession);
+
+  useEffect(() => {
+    if (!hasAnimatedInSession) {
+      hasAnimatedInSession = true;
+    }
+  }, []);
+
   const title = "DEVAMATHA".split("");
 
   return (
@@ -105,7 +116,7 @@ const HeroSection = () => {
               key={i}
               initial={{ y: "100%", opacity: 0, rotate: 10 }}
               animate={{ y: 0, opacity: 1, rotate: 0 }}
-              transition={{ delay: 2.9 + i * 0.05, duration: 0.8, type: "spring", damping: 15 }}
+              transition={{ delay: isFirstLoad ? 2.9 + i * 0.05 : 0, duration: 0.8, type: "spring", damping: 15 }}
               className="inline-block text-transparent bg-clip-text bg-gradient-to-b from-white via-white/90 to-white/40"
             >
               {letter}
@@ -117,7 +128,7 @@ const HeroSection = () => {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 3.5, duration: 0.8, ease: "easeOut" }}
+          transition={{ delay: isFirstLoad ? 3.5 : 0, duration: 0.8, ease: "easeOut" }}
           className="font-display text-[27.5px] text-accent font-bold tracking-wide drop-shadow-lg"
         >
           ARTS AND SCIENCE COLLEGE, PAISAKARY
@@ -127,7 +138,7 @@ const HeroSection = () => {
         <motion.div
            initial={{ opacity: 0, y: -20, scale: 0.95 }}
            animate={{ opacity: 1, y: 0, scale: 1 }}
-           transition={{ duration: 0.8, ease: "easeOut", delay: 3 }}
+           transition={{ duration: 0.8, ease: "easeOut", delay: isFirstLoad ? 3 : 0 }}
            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mt-4 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]"
         >
           <Sparkles className="w-4 h-4 text-accent animate-pulse" />
@@ -137,7 +148,7 @@ const HeroSection = () => {
                 key={i}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 3.1 + i * 0.03, duration: 0.3 }}
+                transition={{ delay: isFirstLoad ? 3.1 + i * 0.03 : 0, duration: 0.3 }}
               >
                 {char}
               </motion.span>
@@ -149,7 +160,7 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 4, duration: 0.8, ease: "easeOut" }}
+          transition={{ delay: isFirstLoad ? 4 : 0, duration: 0.8, ease: "easeOut" }}
           className="mt-12 md:mt-16"
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }} className="relative group">
