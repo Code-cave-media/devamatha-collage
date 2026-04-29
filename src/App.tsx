@@ -17,6 +17,14 @@ import IQACPage from "./pages/IQACPage";
 import NewsPage from "./pages/NewsPage";
 import FacilitiesPage from "./pages/FacilitiesPage";
 import CourseDetailPage from "./pages/CourseDetailPage";
+import CommitteesPage from "./pages/CommitteesPage";
+import AntiRaggingPage from "./pages/committee/AntiRaggingPage";
+import SpecialProtectionPage from "./pages/committee/SpecialProtectionPage";
+import WomenAntiHarassmentPage from "./pages/committee/WomenAntiHarassmentPage";
+import StudentsGrievancePage from "./pages/committee/StudentsGrievancePage";
+import InternshipMonitoringPage from "./pages/committee/InternshipMonitoringPage";
+import CareerGuidancePage from "./pages/committee/CareerGuidancePage";
+import StudentsWelfarePage from "./pages/committee/StudentsWelfarePage";
 import NotFound from "./pages/NotFound";
 import { LoadingScreen } from "./components/LoadingScreen";
 
@@ -80,6 +88,14 @@ const App = () => {
             <Route path="/iqac" element={<IQACPage />} />
             <Route path="/news" element={<NewsPage />} />
             <Route path="/facilities" element={<FacilitiesPage />} />
+            <Route path="/committees" element={<CommitteesPage />} />
+            <Route path="/committee/anti-ragging" element={<AntiRaggingPage />} />
+            <Route path="/committee/special-protection" element={<SpecialProtectionPage />} />
+            <Route path="/committee/women-anti-harassment" element={<WomenAntiHarassmentPage />} />
+            <Route path="/committee/students-grievance" element={<StudentsGrievancePage />} />
+            <Route path="/committee/internship-monitoring" element={<InternshipMonitoringPage />} />
+            <Route path="/committee/career-guidance" element={<CareerGuidancePage />} />
+            <Route path="/committee/students-welfare" element={<StudentsWelfarePage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

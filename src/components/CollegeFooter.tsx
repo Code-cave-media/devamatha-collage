@@ -76,11 +76,12 @@ const CollegeFooter = () => (
           <h4 className="font-display text-base font-semibold mb-4">Committees</h4>
           <ul className="space-y-2 text-sm text-gray-600">
             {[
-              "Anti Ragging Cell",
+              "Anti Ragging Committee",
+              "Special Protection Group",
               "Women's Anti-Harassment Cell",
               "Students' Grievance Redressal Cell",
-              "Students Welfare Cell",
-              "Special Protection Group"
+              "Internship Monitoring Committee",
+              "Career Guidance and Placement Cell"
             ].map((committee) => (
               <li key={committee}>{committee}</li>
             ))}
