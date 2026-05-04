@@ -50,11 +50,13 @@ const StudentsCornerPage = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-t from-accent/5 to-primary/5"></div>
             <div className="relative z-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shadow-lg">
-                  <ExternalLink className="w-6 h-6 text-white" />
+              <div className="text-center mb-6">
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shadow-lg">
+                    <ExternalLink className="w-6 h-6 text-white" />
+                  </div>
+                  <h2 className="font-heading text-3xl font-bold text-foreground">K-Reap Portal</h2>
                 </div>
-                <h2 className="font-heading text-3xl font-bold text-foreground">K-Reap Portal</h2>
               </div>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <a href="https://kannuradm.kreap.co.in/applicant/?#/login?client=KANNUR" target="_blank" rel="noopener noreferrer" className="group bg-card p-6 rounded-xl border border-accent/30 hover:border-accent transition-all hover:scale-105 hover:shadow-lg">
@@ -97,11 +99,13 @@ const StudentsCornerPage = () => {
             transition={{ delay: 0.1 }}
             className="bg-card rounded-3xl p-8 border border-border shadow-lg"
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                <FileText className="w-6 h-6 text-white" />
+            <div className="text-center mb-6">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+                  <FileText className="w-6 h-6 text-white" />
+                </div>
+                <h2 className="font-heading text-3xl font-bold text-foreground">Syllabus</h2>
               </div>
-              <h2 className="font-heading text-3xl font-bold text-foreground">Syllabus</h2>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="https://www.kannuruniversity.ac.in/en/academics/syllabus/?" target="_blank" rel="noopener noreferrer" className="flex-1 bg-gradient-to-r from-accent to-primary text-white p-6 rounded-xl hover:opacity-90 transition-all flex items-center justify-between group">
@@ -121,52 +125,176 @@ const StudentsCornerPage = () => {
             </div>
           </motion.div>
 
-          {/* Committees Section */}
+          {/* Committees Cards Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5 }}
-            className="bg-gradient-to-br from-accent/10 to-primary/10 rounded-3xl p-8 border border-accent/20 shadow-xl relative overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-accent/5 to-primary/5"></div>
-            <div className="relative z-10">
-              <div className="flex items-center gap-3 mb-6">
+            <div className="text-center mb-8">
+              <div className="flex items-center justify-center gap-3 mb-4">
                 <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shadow-lg">
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <h2 className="font-heading text-3xl font-bold text-foreground">Committees</h2>
               </div>
-                            <div className="grid md:grid-cols-2 gap-4 mb-6">
-                <div className="bg-white dark:bg-card p-4 rounded-xl shadow-md">
-                  <h4 className="font-semibold text-sm text-foreground mb-2">Active Committees</h4>
-                  <ul className="text-xs text-muted-foreground space-y-1">
-                    <li>• Anti Ragging Committee</li>
-                    <li>• Special Protection Group (SPG)</li>
-                    <li>• Women's Anti-Harassment Cell</li>
-                    <li>• Students' Grievance Redressal Cell</li>
-                  </ul>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Anti Ragging Committee */}
+              <motion.div
+                whileHover={{ scale: 1.02, y: -5 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => navigate('/committee/anti-ragging')}
+                className="bg-gradient-to-br from-red-50 to-pink-50 dark:from-red-950/20 dark:to-pink-950/20 rounded-2xl p-6 border border-red-200 dark:border-red-800 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center">
+                    <Shield className="w-6 h-6 text-red-600" />
+                  </div>
+                  <h3 className="font-semibold text-lg text-foreground">Anti Ragging Committee</h3>
                 </div>
-                <div className="bg-white dark:bg-card p-4 rounded-xl shadow-md">
-                  <h4 className="font-semibold text-sm text-foreground mb-2">Support Committees</h4>
-                  <ul className="text-xs text-muted-foreground space-y-1">
-                    <li>• Internship Monitoring Committee</li>
-                    <li>• Career Guidance and Placement Cell</li>
-                    <li>• Students' Welfare Cell</li>
-                  </ul>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Ensuring a ragging-free environment for all students
+                </p>
+                <div className="flex items-center text-red-600 font-medium text-sm">
+                  <span>View Details</span>
+                  <ArrowRight className="w-4 h-4 ml-1" />
                 </div>
-              </div>
-              <div className="flex justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => navigate('/committees')}
-                  className="bg-gradient-to-r from-accent to-primary text-white px-8 py-3 rounded-xl font-semibold hover:from-accent/90 hover:to-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2"
-                >
-                  View All Committees
-                  <ArrowRight className="w-4 h-4" />
-                </motion.button>
-              </div>
+              </motion.div>
+
+              {/* Special Protection Group */}
+              <motion.div
+                whileHover={{ scale: 1.02, y: -5 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => navigate('/committee/special-protection')}
+                className="bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-950/20 dark:to-blue-950/20 rounded-2xl p-6 border border-indigo-200 dark:border-indigo-800 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center">
+                    <Shield className="w-6 h-6 text-indigo-600" />
+                  </div>
+                  <h3 className="font-semibold text-lg text-foreground">Special Protection Group</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Campus safety and student protection
+                </p>
+                <div className="flex items-center text-indigo-600 font-medium text-sm">
+                  <span>View Details</span>
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </div>
+              </motion.div>
+
+              {/* Women's Anti-Harassment Cell */}
+              <motion.div
+                whileHover={{ scale: 1.02, y: -5 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => navigate('/committee/women-anti-harassment')}
+                className="bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-950/20 dark:to-rose-950/20 rounded-2xl p-6 border border-pink-200 dark:border-pink-800 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center">
+                    <Heart className="w-6 h-6 text-pink-600" />
+                  </div>
+                  <h3 className="font-semibold text-lg text-foreground">Women's Anti-Harassment Cell</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Empowering women and ensuring safety
+                </p>
+                <div className="flex items-center text-pink-600 font-medium text-sm">
+                  <span>View Details</span>
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </div>
+              </motion.div>
+
+              {/* Students' Grievance Redressal Cell */}
+              <motion.div
+                whileHover={{ scale: 1.02, y: -5 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => navigate('/committee/students-grievance')}
+                className="bg-gradient-to-br from-accent/10 to-primary/10 rounded-2xl p-6 border border-accent/30 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+                    <Users className="w-6 h-6 text-accent-foreground" />
+                  </div>
+                  <h3 className="font-semibold text-lg text-foreground">Students' Grievance Cell</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Addressing student concerns effectively
+                </p>
+                <div className="flex items-center text-accent font-medium text-sm">
+                  <span>View Details</span>
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </div>
+              </motion.div>
+
+              {/* Internship Monitoring Committee */}
+              <motion.div
+                whileHover={{ scale: 1.02, y: -5 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => navigate('/committee/internship-monitoring')}
+                className="bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-teal-950/20 dark:to-cyan-950/20 rounded-2xl p-6 border border-teal-200 dark:border-teal-800 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center">
+                    <Briefcase className="w-6 h-6 text-teal-600" />
+                  </div>
+                  <h3 className="font-semibold text-lg text-foreground">Internship Monitoring</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Supervising student internship programmes
+                </p>
+                <div className="flex items-center text-teal-600 font-medium text-sm">
+                  <span>View Details</span>
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </div>
+              </motion.div>
+
+              {/* Career Guidance and Placement Cell */}
+              <motion.div
+                whileHover={{ scale: 1.02, y: -5 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => navigate('/committee/career-guidance')}
+                className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/20 dark:to-cyan-950/20 rounded-2xl p-6 border border-blue-200 dark:border-blue-800 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                    <Briefcase className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="font-semibold text-lg text-foreground">Career Guidance & Placement</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Bridging education and professional success
+                </p>
+                <div className="flex items-center text-blue-600 font-medium text-sm">
+                  <span>View Details</span>
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </div>
+              </motion.div>
+
+              {/* Students' Welfare Cell */}
+              <motion.div
+                whileHover={{ scale: 1.02, y: -5 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => navigate('/committee/students-welfare')}
+                className="bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-950/20 dark:to-amber-950/20 rounded-2xl p-6 border border-yellow-200 dark:border-yellow-800 shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center">
+                    <Star className="w-6 h-6 text-yellow-600" />
+                  </div>
+                  <h3 className="font-semibold text-lg text-foreground">Students' Welfare Cell</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Supporting student well-being and development
+                </p>
+                <div className="flex items-center text-yellow-600 font-medium text-sm">
+                  <span>View Details</span>
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </div>
+              </motion.div>
             </div>
           </motion.div>
 
@@ -178,11 +306,13 @@ const StudentsCornerPage = () => {
             transition={{ delay: 0.9 }}
             className="bg-card rounded-3xl p-8 border border-border shadow-lg"
           >
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                <Download className="w-6 h-6 text-white" />
+            <div className="text-center mb-6">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+                  <Download className="w-6 h-6 text-white" />
+                </div>
+                <h2 className="font-heading text-3xl font-bold text-foreground">Download Forms</h2>
               </div>
-              <h2 className="font-heading text-3xl font-bold text-foreground">Download Forms</h2>
             </div>
             <div className="flex justify-center">
               <div className="bg-secondary/50 p-6 rounded-xl border border-border hover:border-accent transition-all flex items-center justify-center gap-3 group cursor-pointer max-w-md w-full">
@@ -201,11 +331,13 @@ const StudentsCornerPage = () => {
             transition={{ delay: 0.2 }}
             className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/20 dark:to-pink-950/20 rounded-3xl p-8 border border-purple-200 dark:border-purple-800"
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center">
-                <Users className="w-6 h-6 text-white" />
+            <div className="text-center mb-6">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <h2 className="font-heading text-3xl font-bold text-foreground">Alumni Association</h2>
               </div>
-              <h2 className="font-heading text-3xl font-bold text-foreground">Alumni Association</h2>
             </div>
             <p className="text-muted-foreground leading-relaxed mb-8">
               The Alumni Association of Devamatha Arts & Science College serves as a vibrant platform that connects former students with their alma mater. It plays a significant role in strengthening the bond between past and present members of the college community while contributing to its continuous growth and development.
@@ -360,11 +492,13 @@ const StudentsCornerPage = () => {
             transition={{ delay: 0.4 }}
             className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20 rounded-3xl p-8 border border-green-200 dark:border-green-800"
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center">
-                <Heart className="w-6 h-6 text-white" />
+            <div className="text-center mb-6">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center">
+                  <Heart className="w-6 h-6 text-white" />
+                </div>
+                <h2 className="font-heading text-3xl font-bold text-foreground">National Service Scheme (NSS)</h2>
               </div>
-              <h2 className="font-heading text-3xl font-bold text-foreground">National Service Scheme (NSS)</h2>
             </div>
             <p className="text-muted-foreground leading-relaxed mb-6">
               The National Service Scheme (NSS) unit of Devamatha Arts & Science College is a vibrant platform that nurtures social responsibility, leadership, and community engagement among students. Functioning under the guidelines of the National Service Scheme, the unit encourages students to actively participate in nation-building activities through voluntary service.
