@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Library",
+    "src": "/Gallery-img/1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Sports",
+    "src": "/Gallery-img/2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Labs",
+    "src": "/Gallery-img/3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Function",
+    "src": "/Gallery-img/4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Collage photos",
+    "src": "/Gallery-img/5.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Seminar",
+    "src": "/Gallery-img/6.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Nss",
+    "src": "/Gallery-img/7.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Staff",
+    "src": "/Gallery-img/8.jpg"
+  },
+  {
+    "id": 9,
+    "title": "PTA",
+    "src": "/Gallery-img/9.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Arts & Sports",
+    "src": "/Gallery-img/10.jpg"
+  },
+  {
+    "id": 11,
+    "title": "P G Dept. of Commerce",
+    "src": "/Gallery-img/11.jpg"
+  },
+  {
+    "id": 12,
+    "title": "2023-24",
+    "src": "/Gallery-img/12.jpg"
+  }
+]
