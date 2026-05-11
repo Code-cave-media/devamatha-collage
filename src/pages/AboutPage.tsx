@@ -4,6 +4,7 @@ import { ArrowRight, Users, Award, BookOpen, Calendar, MapPin, Phone, Mail, Grad
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import CollegeFooter from "@/components/CollegeFooter";
+import { getPersonImageSrc } from "@/data/personImages";
 
 const AboutPage = () => {
   const [activeTab, setActiveTab] = useState("managers");
@@ -285,7 +286,7 @@ const AboutPage = () => {
                 name: "Rev. Fr. Noble Onamkulam",
                 title: "Manager",
                 role: "Manager, Deva Matha College",
-                image: "https://www.devamathacollege.ac.in/img/images/Rev.Fr.NobleOnamkulam_120.jpg",
+                image: "/img/father.jpg",
                 icon: "Award"
               },
               {
@@ -404,9 +405,26 @@ const AboutPage = () => {
                   whileHover={{ y: -5, boxShadow: "0 20px 40px -12px hsl(var(--primary) / 0.25)" }}
                   className="bg-card p-6 rounded-xl border border-border shadow-lg text-center cursor-pointer"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Award className="w-8 h-8 text-accent" />
-                  </div>
+                  {(() => {
+                    const src = getPersonImageSrc(leader);
+                    if (src) {
+                      return (
+                        <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-4 shadow-sm ring-2 ring-border">
+                          <img
+                            src={src}
+                            alt={leader}
+                            className="w-full h-full object-cover object-top"
+                            loading="lazy"
+                          />
+                        </div>
+                      );
+                    }
+                    return (
+                      <div className="w-16 h-16 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Award className="w-8 h-8 text-accent" />
+                      </div>
+                    );
+                  })()}
                   <p className="font-heading font-semibold text-foreground">{leader}</p>
                 </motion.div>
               ))}

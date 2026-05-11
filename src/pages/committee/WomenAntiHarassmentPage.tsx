@@ -70,6 +70,12 @@ const WomenAntiHarassmentPage = () => {
             <h2 className="font-heading text-2xl font-bold text-foreground mb-4">
               Women's Anti-Harassment Cell
             </h2>
+            <p className="text-muted-foreground leading-relaxed italic mb-4">
+              "Educate a man, you educate an individual; educate a woman, you educate a family."
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              The College Women's Cell endeavours to empower women and promote gender sensitivity, thereby fostering a safe and congenial environment on the campus. The Cell also functions as a Women's Grievance Redressal Committee, addressing issues and concerns related to women students and staff.
+            </p>
           </motion.div>
 
           {/* Committee Members */}

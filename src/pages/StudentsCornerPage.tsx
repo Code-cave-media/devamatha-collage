@@ -523,27 +523,117 @@ const StudentsCornerPage = () => {
             </div>
           </motion.div>
 
-          {/* Download Forms Section */}
+          {/* NSS Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.9 }}
-            className="bg-card rounded-3xl p-8 border border-border shadow-lg"
+            transition={{ delay: 0.4 }}
+            className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20 rounded-3xl p-8 border border-green-200 dark:border-green-800"
           >
             <div className="text-center mb-6">
               <div className="flex items-center justify-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                  <Download className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center">
+                  <Heart className="w-6 h-6 text-white" />
                 </div>
-                <h2 className="font-heading text-3xl font-bold text-foreground">Download Forms</h2>
+                <h2 className="font-heading text-3xl font-bold text-foreground">National Service Scheme (NSS)</h2>
               </div>
             </div>
-            <div className="flex justify-center">
-              <div className="bg-secondary/50 p-6 rounded-xl border border-border hover:border-accent transition-all flex items-center justify-center gap-3 group cursor-pointer max-w-md w-full">
-                <FileText className="w-8 h-8 text-accent" />
-                <span className="font-semibold text-foreground">Condonation Form</span>
-                <Download className="w-5 h-5 text-accent group-hover:scale-110 transition-transform" />
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              The National Service Scheme (NSS) unit of Devamatha Arts & Science College is a vibrant platform that nurtures social responsibility, leadership, and community engagement among students. Functioning under the guidelines of the National Service Scheme, the unit encourages students to actively participate in nation-building activities through voluntary service.
+            </p>
+            
+            <div className="bg-white dark:bg-card p-4 rounded-xl shadow-md mb-6">
+              <h3 className="font-semibold text-lg text-foreground mb-2 flex items-center gap-2">
+                <Sparkles className="w-5 h-5 text-green-600" />
+                Motto
+              </h3>
+              <p className="text-muted-foreground italic">"Not Me, But You" – reflecting the spirit of selfless service and concern for others.</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div className="bg-white dark:bg-card p-6 rounded-xl shadow-md">
+                <h3 className="font-semibold text-lg text-foreground mb-4 flex items-center gap-2">
+                  <Target className="w-5 h-5 text-green-600" />
+                  Objectives
+                </h3>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Develop social awareness and civic responsibility among students</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Encourage active participation in community service</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Promote leadership, teamwork, and discipline</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Foster a sense of national integration and social harmony</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-white dark:bg-card p-6 rounded-xl shadow-md">
+                <h3 className="font-semibold text-lg text-foreground mb-4 flex items-center gap-2">
+                  <Activity className="w-5 h-5 text-green-600" />
+                  Major Activities
+                </h3>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span><strong>Community Service:</strong> Cleanliness drives, village adoption, and social awareness campaigns</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span><strong>Health & Welfare:</strong> Blood donation camps, medical camps, and health awareness programmes</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span><strong>Environmental Initiatives:</strong> Tree plantation drives, plastic-free campaigns, and conservation activities</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span><strong>Special Camps:</strong> Seven-day rural camps focusing on community development</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span><strong>Disaster Relief:</strong> Participation in relief and rehabilitation activities during natural calamities</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white dark:bg-card p-6 rounded-xl shadow-md">
+                <h3 className="font-semibold text-lg text-foreground mb-4 flex items-center gap-2">
+                  <Award className="w-5 h-5 text-green-600" />
+                  Benefits for Students
+                </h3>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Personality development and leadership skills</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Exposure to real-life social issues</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Opportunity to serve society meaningfully</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span>Additional weightage in higher education and employment opportunities</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-white dark:bg-card p-6 rounded-xl shadow-md">
+                <p className="text-sm text-muted-foreground"><span className="font-semibold">Unit No.</span> : 45</p>
+                <p className="text-sm text-muted-foreground"><span className="font-semibold">Programme Officer</span> : Pravisha N</p>
               </div>
             </div>
           </motion.div>
@@ -709,117 +799,27 @@ const StudentsCornerPage = () => {
             </div>
           </motion.div>
 
-          {/* NSS Section */}
+          {/* Download Forms Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20 rounded-3xl p-8 border border-green-200 dark:border-green-800"
+            transition={{ delay: 0.9 }}
+            className="bg-card rounded-3xl p-8 border border-border shadow-lg"
           >
             <div className="text-center mb-6">
               <div className="flex items-center justify-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center">
-                  <Heart className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+                  <Download className="w-6 h-6 text-white" />
                 </div>
-                <h2 className="font-heading text-3xl font-bold text-foreground">National Service Scheme (NSS)</h2>
+                <h2 className="font-heading text-3xl font-bold text-foreground">Download Forms</h2>
               </div>
             </div>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              The National Service Scheme (NSS) unit of Devamatha Arts & Science College is a vibrant platform that nurtures social responsibility, leadership, and community engagement among students. Functioning under the guidelines of the National Service Scheme, the unit encourages students to actively participate in nation-building activities through voluntary service.
-            </p>
-            
-            <div className="bg-white dark:bg-card p-4 rounded-xl shadow-md mb-6">
-              <h3 className="font-semibold text-lg text-foreground mb-2 flex items-center gap-2">
-                <Sparkles className="w-5 h-5 text-green-600" />
-                Motto
-              </h3>
-              <p className="text-muted-foreground italic">"Not Me, But You" – reflecting the spirit of selfless service and concern for others.</p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <div className="bg-white dark:bg-card p-6 rounded-xl shadow-md">
-                <h3 className="font-semibold text-lg text-foreground mb-4 flex items-center gap-2">
-                  <Target className="w-5 h-5 text-green-600" />
-                  Objectives
-                </h3>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Develop social awareness and civic responsibility among students</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Encourage active participation in community service</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Promote leadership, teamwork, and discipline</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Foster a sense of national integration and social harmony</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-white dark:bg-card p-6 rounded-xl shadow-md">
-                <h3 className="font-semibold text-lg text-foreground mb-4 flex items-center gap-2">
-                  <Activity className="w-5 h-5 text-green-600" />
-                  Major Activities
-                </h3>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span><strong>Community Service:</strong> Cleanliness drives, village adoption, and social awareness campaigns</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span><strong>Health & Welfare:</strong> Blood donation camps, medical camps, and health awareness programmes</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span><strong>Environmental Initiatives:</strong> Tree plantation drives, plastic-free campaigns, and conservation activities</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span><strong>Special Camps:</strong> Seven-day rural camps focusing on community development</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span><strong>Disaster Relief:</strong> Participation in relief and rehabilitation activities during natural calamities</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white dark:bg-card p-6 rounded-xl shadow-md">
-                <h3 className="font-semibold text-lg text-foreground mb-4 flex items-center gap-2">
-                  <Award className="w-5 h-5 text-green-600" />
-                  Benefits for Students
-                </h3>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Personality development and leadership skills</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Exposure to real-life social issues</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Opportunity to serve society meaningfully</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>Additional weightage in higher education and employment opportunities</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-green-50 dark:bg-green-950/30 p-6 rounded-xl">
-                <p className="text-sm text-muted-foreground"><span className="font-semibold">Unit No.</span> : 45</p>
-                <p className="text-sm text-muted-foreground"><span className="font-semibold">Programme Officer</span> : Pravisha N</p>
+            <div className="flex justify-center">
+              <div className="bg-secondary/50 p-6 rounded-xl border border-border hover:border-accent transition-all flex items-center justify-center gap-3 group cursor-pointer max-w-md w-full">
+                <FileText className="w-8 h-8 text-accent" />
+                <span className="font-semibold text-foreground">Condonation Form</span>
+                <Download className="w-5 h-5 text-accent group-hover:scale-110 transition-transform" />
               </div>
             </div>
           </motion.div>

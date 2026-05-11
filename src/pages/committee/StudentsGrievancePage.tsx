@@ -68,6 +68,9 @@ const StudentsGrievancePage = () => {
             <h2 className="font-heading text-2xl font-bold text-foreground mb-4">
               Students' Grievance Redressal Cell
             </h2>
+            <p className="text-muted-foreground leading-relaxed">
+              The Student Grievance Redressal (SGR) Cell addresses the grievances of students and provides appropriate solutions to ensure the smooth functioning of the College. The Cell also functions as the Discipline Committee on the campus.
+            </p>
           </motion.div>
 
           {/* Committee Members */}

@@ -71,6 +71,12 @@ const StudentsWelfarePage = () => {
             <h2 className="font-heading text-2xl font-bold text-foreground mb-4">
               Students' Welfare Cell
             </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              The Student Welfare Cell is committed to promoting the overall well-being of students by ensuring the effective implementation of various welfare schemes and programmes.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              The Cell undertakes initiatives to facilitate scholarships, insurance, healthcare services, student aid funds, and other welfare measures in association with competent agencies, including the college management. It also provides guidance and counselling support to students, maintains systematic records of all welfare schemes, and gives special attention to the needs of differently abled students.
+            </p>
           </motion.div>
 
           {/* Committee Members */}

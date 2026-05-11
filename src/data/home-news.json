@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "type": "news",
+    "title": "Dr. M. J. Mathew, our principal, Emerges Victorious in University Senate Election",
+    "date": "03 February",
+    "description": "In a momentous victory for democracy and student representation, our principal has emerged triumphant in the recent University Senate election, securing a seat as a voice in the highest decision-making body of the University.",
+    "image": "public/news-img/news1.jpg",
+    "category": "Achievement",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "type": "news",
+    "title": "DMC Mourns the Untimely Demise of a Beloved Student",
+    "date": "23 December",
+    "description": "Devamatha College Family mourns the sudden passing of its son Joseph (1st BCA). He suffered a cardiac arrest while actively participating in a Xmas program at Paisakarry yesterday. We are deeply saddened by the death of this young boy who was active in all his accomplishments not only in college, but in all other areas of his activities too. Its very tragic and we want the family to know that we share their grief . The staff and students of Devamatha College are with the family at this heartbreaking time. Lets pray to God Almighty to grant enough strength to his parents, sisters,family members and other near and dear ones to bear this profound grief.",
+    "category": "Academics",
+    "image": "public/news-img/news2.jpg",
+    "featured": false
+  }
+]

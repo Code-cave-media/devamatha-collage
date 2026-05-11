@@ -1,9 +1,18 @@
 import { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, BookOpen, Sparkles } from "lucide-react";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { ArrowRight, BookOpen, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCountUp } from "@/hooks/useCountUp";
-import heroCampus from "/img/hero.jpg";
+
+// Hero slider images from public/Home slider directory
+const heroImages = [
+  "/Home slider/1.jpg",
+  "/Home slider/2.jpg",
+  "/Home slider/3.jpg",
+  "/Home slider/4.jpg",
+  "/Home slider/5.jpg",
+  "/Home slider/6.jpg"
+];
 
 // Module-level variable to track first load in current session
 let hasAnimatedInSession = false;
@@ -66,6 +75,24 @@ const HeroSection = () => {
   const heroOpacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   const [isFirstLoad, setIsFirstLoad] = useState(!hasAnimatedInSession);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+  };
 
   useEffect(() => {
     if (!hasAnimatedInSession) {
@@ -77,10 +104,21 @@ const HeroSection = () => {
 
   return (
     <section id="home" ref={sectionRef} className="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-college-navy selection:bg-accent/40">
-      {/* Background with Parallax */}
+      {/* Background with Parallax and Slider */}
       <motion.div className="absolute inset-0" style={{ y: bgY }}>
         <div className="absolute inset-0 bg-gradient-to-b from-college-navy/30 via-college-navy/50 to-college-navy/80 z-10" />
-        <img src={heroCampus} alt="Deva Matha College Campus" className="w-full h-[120%] object-cover opacity-85" />
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={currentSlide}
+            src={heroImages[currentSlide]}
+            alt={`Deva Matha College Campus ${currentSlide + 1}`}
+            className="w-full h-[120%] object-cover opacity-85"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.85 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+          />
+        </AnimatePresence>
       </motion.div>
 
       {/* Animated Aurora Orbs */}
@@ -178,6 +216,36 @@ const HeroSection = () => {
           </motion.div>
         </motion.div>
       </motion.div>
+
+      {/* Slider Navigation Controls */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex items-center gap-4">
+        <button
+          onClick={prevSlide}
+          className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all duration-300 hover:scale-110"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+
+        {/* Slide Indicators */}
+        <div className="flex gap-2">
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                currentSlide === index ? 'bg-white scale-125' : 'bg-white/40 hover:bg-white/60'
+              }`}
+            />
+          ))}
+        </div>
+
+        <button
+          onClick={nextSlide}
+          className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-all duration-300 hover:scale-110"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
+      </div>
 
     </section>
   );

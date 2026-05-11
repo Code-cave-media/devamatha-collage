@@ -17,7 +17,7 @@ const leadershipTeam = [
     name: "Rev. Fr. Noble Onamkulam",
     title: "Manager",
     role: "Manager, Deva Matha College",
-    image: "https://www.devamathacollege.ac.in/img/images/Rev.Fr.NobleOnamkulam_120.jpg",
+    image: "/img/father.jpg",
     icon: Award
   },
   {

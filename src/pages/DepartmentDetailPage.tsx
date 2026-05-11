@@ -3,6 +3,7 @@ import { BookOpen, Languages, Briefcase, Monitor, TrendingUp, Trophy, Users, Use
 import Header from "@/components/Header";
 import CollegeFooter from "@/components/CollegeFooter";
 import { Link, useParams, useNavigate } from "react-router-dom";
+import { getPersonImageSrc } from "@/data/personImages";
 
 // Department data
 const departmentData: Record<string, any> = {
@@ -261,9 +262,26 @@ const DepartmentDetailPage = () => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {department.faculty.map((faculty: any, idx: number) => (
                     <div key={idx} className="bg-background rounded-xl p-6 flex flex-col items-center text-center shadow-md">
-                      <div className={`w-28 h-28 rounded-full ${colors.icon} flex items-center justify-center mb-4`}>
-                        <User className="w-14 h-14 text-white" />
-                      </div>
+                      {(() => {
+                        const src = getPersonImageSrc(faculty.name);
+                        if (src) {
+                          return (
+                            <div className="w-28 h-28 rounded-full overflow-hidden mb-4 shadow-sm ring-2 ring-border">
+                              <img
+                                src={src}
+                                alt={faculty.name}
+                                className="w-full h-full object-cover object-top"
+                                loading="lazy"
+                              />
+                            </div>
+                          );
+                        }
+                        return (
+                          <div className={`w-28 h-28 rounded-full ${colors.icon} flex items-center justify-center mb-4`}>
+                            <User className="w-14 h-14 text-white" />
+                          </div>
+                        );
+                      })()}
                       <p className="font-semibold text-foreground text-lg">{faculty.name}</p>
                       {faculty.role && <p className="text-sm text-muted-foreground mt-1">{faculty.role}</p>}
                     </div>
