@@ -11,7 +11,9 @@ const heroImages = [
   "/Home slider/3.jpg",
   "/Home slider/4.jpg",
   "/Home slider/5.jpg",
-  "/Home slider/6.jpg"
+  "/Home slider/6.jpg",
+  "/Home slider/7.jpg",
+  "/Home slider/8.jpg"
 ];
 
 const slideVariants = {
