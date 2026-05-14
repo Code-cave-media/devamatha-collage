@@ -10,18 +10,15 @@ import { useNavigate } from "react-router-dom";
 const StudentsCornerPage = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    fullName: '',
-    mobileNumber: '',
-    emailAddress: '',
-    currentAddress: '',
-    courseProgramme: '',
-    department: '',
-    yearOfAdmission: '',
-    yearOfPassing: '',
-    employmentStatus: '',
-    organizationName: '',
-    jobTitle: '',
-    workLocation: ''
+    name: '',
+    email: '',
+    phone: '',
+    batch: '',
+    course: '',
+    current_occupation: '',
+    company: '',
+    address: '',
+    linkedin_profile: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
@@ -37,51 +34,29 @@ const StudentsCornerPage = () => {
     setSubmitMessage('');
 
     try {
-      const now = new Date();
-      const registrationDate = now.toLocaleDateString('en-GB');
-      const registrationTime = now.toLocaleTimeString('en-GB', { hour12: false });
-
-      const submissionData = {
-        ...formData,
-        registrationDate,
-        registrationTime
-      };
-
-      // Google Apps Script URL for Alumni Registration
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbwdPEUfYIGkIi6n590lONonSKBJ8om4W_e67_3yPC0TEG3_eVoXtiPK92kCQ-bOnj3v/exec';
-      
-      // Use FormData to avoid CORS issues with Google Apps Script
-      const formDataToSend = new FormData();
-      Object.keys(submissionData).forEach(key => {
-        formDataToSend.append(key, submissionData[key as keyof typeof submissionData]);
-      });
-      
-      const response = await fetch(scriptURL, {
+      const response = await fetch('http://localhost:8000/api/alumni-associations/', {
         method: 'POST',
-        body: formDataToSend,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
 
-      const result = await response.json();
-      console.log('Response:', result);
-
-      if (result.status === 'success') {
+      if (response.ok) {
         setSubmitMessage('Registration submitted successfully!');
         setFormData({
-          fullName: '',
-          mobileNumber: '',
-          emailAddress: '',
-          currentAddress: '',
-          courseProgramme: '',
-          department: '',
-          yearOfAdmission: '',
-          yearOfPassing: '',
-          employmentStatus: '',
-          organizationName: '',
-          jobTitle: '',
-          workLocation: ''
+          name: '',
+          email: '',
+          phone: '',
+          batch: '',
+          course: '',
+          current_occupation: '',
+          company: '',
+          address: '',
+          linkedin_profile: ''
         });
       } else {
-        setSubmitMessage(`Error: ${result.message || 'Please try again.'}`);
+        setSubmitMessage('Error submitting registration. Please try again.');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -797,19 +772,23 @@ const StudentsCornerPage = () => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">Full Name *</label>
-                      <input type="text" name="fullName" value={formData.fullName} onChange={handleInputChange} required className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Enter your full name" />
+                      <input type="text" name="name" value={formData.name} onChange={handleInputChange} required className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Enter your full name" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">Mobile Number *</label>
-                      <input type="tel" name="mobileNumber" value={formData.mobileNumber} onChange={handleInputChange} required className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Enter your mobile number" />
+                      <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} required className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Enter your mobile number" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">Email Address *</label>
-                      <input type="email" name="emailAddress" value={formData.emailAddress} onChange={handleInputChange} required className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Enter your email address" />
+                      <input type="email" name="email" value={formData.email} onChange={handleInputChange} required className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Enter your email address" />
                     </div>
                     <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">LinkedIn Profile</label>
+                      <input type="url" name="linkedin_profile" value={formData.linkedin_profile} onChange={handleInputChange} className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Enter LinkedIn profile URL" />
+                    </div>
+                    <div className="md:col-span-2">
                       <label className="block text-sm font-medium text-foreground mb-2">Current Address *</label>
-                      <textarea name="currentAddress" value={formData.currentAddress} onChange={handleInputChange} required className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600" rows={3} placeholder="Enter your current address"></textarea>
+                      <textarea name="address" value={formData.address} onChange={handleInputChange} required className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600" rows={3} placeholder="Enter your current address"></textarea>
                     </div>
                   </div>
                 </div>
@@ -820,28 +799,20 @@ const StudentsCornerPage = () => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">Course / Programme *</label>
-                      <select name="courseProgramme" value={formData.courseProgramme} onChange={handleInputChange} required className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600">
+                      <select name="course" value={formData.course} onChange={handleInputChange} required className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600">
                         <option value="">Select Course</option>
                         <option value="bba">BBA</option>
                         <option value="bca">BCA</option>
                         <option value="bcom">B.Com</option>
-                        <option value="ba">BA English</option>
+                        <option value="ba-english">BA English</option>
                         <option value="bsc">B.Sc</option>
-                        <option value="ma">MA English</option>
-                        <option value="mcom">M.Com</option>
+                        <option value="ma-english">MA English</option>
+                        <option value="mcom-finance">M.Com Finance</option>
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Department *</label>
-                      <input type="text" name="department" value={formData.department} onChange={handleInputChange} required className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Enter department" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Year of Admission *</label>
-                      <input type="number" name="yearOfAdmission" value={formData.yearOfAdmission} onChange={handleInputChange} required min="2000" max="2030" className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Enter year of admission" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Year of Passing *</label>
-                      <input type="number" name="yearOfPassing" value={formData.yearOfPassing} onChange={handleInputChange} required min="2000" max="2030" className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Enter year of passing" />
+                      <label className="block text-sm font-medium text-foreground mb-2">Batch (Year of Admission) *</label>
+                      <input type="text" name="batch" value={formData.batch} onChange={handleInputChange} required className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="e.g., 2020-2023" />
                     </div>
                   </div>
                 </div>
@@ -851,26 +822,12 @@ const StudentsCornerPage = () => {
                   <h4 className="font-semibold text-foreground mb-3 text-sm">Employment / Work Place Details</h4>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Current Employment Status *</label>
-                      <select name="employmentStatus" value={formData.employmentStatus} onChange={handleInputChange} required className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600">
-                        <option value="">Select Status</option>
-                        <option value="employed">Employed</option>
-                        <option value="self-employed">Self-employed</option>
-                        <option value="higher-studies">Higher Studies</option>
-                        <option value="unemployed">Unemployed</option>
-                      </select>
+                      <label className="block text-sm font-medium text-foreground mb-2">Current Occupation *</label>
+                      <input type="text" name="current_occupation" value={formData.current_occupation} onChange={handleInputChange} required className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Enter your current occupation" />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Organization / Company Name</label>
-                      <input type="text" name="organizationName" value={formData.organizationName} onChange={handleInputChange} className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Enter organization name" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Job Title / Designation</label>
-                      <input type="text" name="jobTitle" value={formData.jobTitle} onChange={handleInputChange} className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Enter job title" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Work Location</label>
-                      <input type="text" name="workLocation" value={formData.workLocation} onChange={handleInputChange} className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="City, State, Country" />
+                      <label className="block text-sm font-medium text-foreground mb-2">Company / Organization Name</label>
+                      <input type="text" name="company" value={formData.company} onChange={handleInputChange} className="w-full px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Enter organization name" />
                     </div>
                   </div>
                 </div>

@@ -8,13 +8,15 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 const AdmissionPage = () => {
   const [formData, setFormData] = useState({
-    applicantName: '',
-    programme: '',
-    mobileNumber: '',
+    name: '',
+    email: '',
+    phone: '',
+    course: '',
+    percentage: '',
+    previous_school: '',
     address: '',
-    totalMarks: '',
-    stream: '',
-    lastInstitution: ''
+    parent_name: '',
+    parent_phone: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
@@ -30,46 +32,29 @@ const AdmissionPage = () => {
     setSubmitMessage('');
 
     try {
-      const now = new Date();
-      const enquiryDate = now.toLocaleDateString('en-GB');
-      const enquiryTime = now.toLocaleTimeString('en-GB', { hour12: false });
-
-      const submissionData = {
-        ...formData,
-        enquiryDate,
-        enquiryTime
-      };
-
-      // Google Apps Script URL for Management Quota Enquiry
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbzNWeGOexawI_506PNi8QdK0BrsTeh3kSU64Oj37VmjLvla_wlz9DS8WL5Qj1jdyb88Uw/exec';
-      
-      // Use FormData to avoid CORS issues with Google Apps Script
-      const formDataToSend = new FormData();
-      Object.keys(submissionData).forEach(key => {
-        formDataToSend.append(key, submissionData[key as keyof typeof submissionData]);
-      });
-      
-      const response = await fetch(scriptURL, {
+      const response = await fetch('http://localhost:8000/api/management-quota-applications/', {
         method: 'POST',
-        body: formDataToSend,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
 
-      const result = await response.json();
-      console.log('Response:', result);
-
-      if (result.status === 'success') {
+      if (response.ok) {
         setSubmitMessage('Enquiry submitted successfully!');
         setFormData({
-          applicantName: '',
-          programme: '',
-          mobileNumber: '',
+          name: '',
+          email: '',
+          phone: '',
+          course: '',
+          percentage: '',
+          previous_school: '',
           address: '',
-          totalMarks: '',
-          stream: '',
-          lastInstitution: ''
+          parent_name: '',
+          parent_phone: ''
         });
       } else {
-        setSubmitMessage(`Error: ${result.message || 'Please try again.'}`);
+        setSubmitMessage('Error submitting enquiry. Please try again.');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -238,12 +223,22 @@ const AdmissionPage = () => {
             <form onSubmit={handleSubmit} className="bg-white dark:bg-card p-6 rounded-xl shadow-md space-y-4">
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">Name of the Applicant</label>
-                <input type="text" name="applicantName" value={formData.applicantName} onChange={handleInputChange} required className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Enter your full name" />
+                <input type="text" name="name" value={formData.name} onChange={handleInputChange} required className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Enter your full name" />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Email</label>
+                <input type="email" name="email" value={formData.email} onChange={handleInputChange} required className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Enter your email" />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Mobile Number</label>
+                <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} required className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Enter your mobile number" />
               </div>
               
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">Programme</label>
-                <select name="programme" value={formData.programme} onChange={handleInputChange} required className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent">
+                <select name="course" value={formData.course} onChange={handleInputChange} required className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent">
                   <option value="">Select Programme</option>
                   <option value="bba-hospital">BBA Hospital Administration</option>
                   <option value="bcom-logistics">B.Com Logistics & Supply Chain Management</option>
@@ -260,33 +255,28 @@ const AdmissionPage = () => {
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Mobile Number</label>
-                <input type="tel" name="mobileNumber" value={formData.mobileNumber} onChange={handleInputChange} required className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Enter your mobile number" />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Address</label>
-                <textarea name="address" value={formData.address} onChange={handleInputChange} required className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent" rows={3} placeholder="Enter your address"></textarea>
-              </div>
-              
-              <div>
                 <label className="block text-sm font-medium text-foreground mb-2">Total Marks Obtained</label>
-                <input type="text" name="totalMarks" value={formData.totalMarks} onChange={handleInputChange} required className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Enter total marks" />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">Stream</label>
-                <select name="stream" value={formData.stream} onChange={handleInputChange} required className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent">
-                  <option value="">Select Stream</option>
-                  <option value="science">Science</option>
-                  <option value="commerce">Commerce</option>
-                  <option value="humanities">Humanities</option>
-                </select>
+                <input type="text" name="percentage" value={formData.percentage} onChange={handleInputChange} required className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Enter total marks" />
               </div>
               
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">Last Institution Studied</label>
-                <input type="text" name="lastInstitution" value={formData.lastInstitution} onChange={handleInputChange} required className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Enter last institution" />
+                <input type="text" name="previous_school" value={formData.previous_school} onChange={handleInputChange} required className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Enter last institution" />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Address</label>
+                <textarea name="address" value={formData.address} onChange={handleInputChange} required className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent" rows={3} placeholder="Enter your address"></textarea>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Parent Name</label>
+                <input type="text" name="parent_name" value={formData.parent_name} onChange={handleInputChange} required className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Enter parent name" />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-2">Parent Phone Number</label>
+                <input type="tel" name="parent_phone" value={formData.parent_phone} onChange={handleInputChange} required className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Enter parent phone number" />
               </div>
 
               {submitMessage && (
