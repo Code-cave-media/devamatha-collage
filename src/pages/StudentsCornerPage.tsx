@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, ExternalLink, GraduationCap, Users, Briefcase, Heart, Shield, Phone, Download, Target, Award, CheckCircle, Star, FileText, User, Building, Activity, Sparkles, ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import CollegeFooter from "@/components/CollegeFooter";
@@ -9,6 +10,13 @@ const StudentsCornerPage = () => {
   const navigate = useNavigate();
   return (
     <>
+      <Helmet>
+        <title>Student's Corner | Devamatha College</title>
+        <meta
+          name="description"
+          content="Student resources, support services, clubs, and campus activities at Devamatha Arts & Science College Paisakary."
+        />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}

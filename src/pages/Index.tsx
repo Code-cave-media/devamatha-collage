@@ -9,9 +9,17 @@ import PosterSlider from "@/components/PosterSlider";
 import NewsEventsSection from "@/components/NewsEventsSection";
 import FacilitiesSection from "@/components/FacilitiesSection";
 import CollegeFooter from "@/components/CollegeFooter";
+import { Helmet } from "react-helmet-async";
 
 const Index = () => (
   <div className="min-h-screen">
+    <Helmet>
+      <title>Home | Devamatha College</title>
+      <meta
+        name="description"
+        content="Official website of Devamatha Arts & Science College Paisakary."
+      />
+    </Helmet>
     <Header />
     <HeroSection />
     <CoursesSection />

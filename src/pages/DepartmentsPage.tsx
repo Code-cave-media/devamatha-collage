@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { BookOpen, Languages, Briefcase, Monitor, TrendingUp, Trophy, Users, User, GraduationCap, Award, ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import CollegeFooter from "@/components/CollegeFooter";
 import { useNavigate } from "react-router-dom";
@@ -194,6 +195,13 @@ const DepartmentsPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Departments | Devamatha College</title>
+        <meta
+          name="description"
+          content="Explore the academic departments at Devamatha Arts & Science College Paisakary."
+        />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}

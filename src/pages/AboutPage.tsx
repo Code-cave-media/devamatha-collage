@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Users, Award, BookOpen, Calendar, MapPin, Phone, Mail, GraduationCap, Heart, Target, Eye } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import CollegeFooter from "@/components/CollegeFooter";
@@ -37,6 +38,13 @@ const AboutPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>About | Devamatha College</title>
+        <meta
+          name="description"
+          content="About Devamatha Arts & Science College Paisakary, its history, vision, mission, and leadership."
+        />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}

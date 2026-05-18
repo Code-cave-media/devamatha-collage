@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 import {
   Calendar,
@@ -109,6 +110,13 @@ const NewsPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>News & Events | Devamatha College</title>
+        <meta
+          name="description"
+          content="Latest news and events from Devamatha Arts & Science College Paisakary."
+        />
+      </Helmet>
       <Header />
 
       {/* Hero */}

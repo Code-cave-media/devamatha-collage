@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 import {
   X,
@@ -209,6 +210,13 @@ const GalleryPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Gallery | Devamatha College</title>
+        <meta
+          name="description"
+          content="Photo and video gallery from Devamatha Arts & Science College Paisakary."
+        />
+      </Helmet>
       <Header />
 
       {/* HERO */}
